@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% if makale %}
+
+<h1>{{makale.baslik}}</h1>
+<hr>
+
+
+<h4>Yazar : {{makale.yazar}}</h6>
+<h4>Tarih : {{makale.tarih}}</h6>
+<hr>
+<h6>{{makale.icerik}}</h6>
+
+
+{% else %}
+
+
+<div class="alert alert-danger">Böyle Bir Makale Bulunmuyor.</div>
+{% endif %}
+
+
+{% endblock body %}
+
+

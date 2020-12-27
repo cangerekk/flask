@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1>Makaleler</h1>
+<hr>
+
+
+<ul class="list-group">
+    
+    {% if makaleler %}
+       {% for makale  in makaleler  %}
+       <a href="/articles/{{makale.id}}" class="list-group-item list-group-item-dark">
+    {{makale.baslik}}
+       </a>
+        
+       {% endfor %}
+
+    {% else %}
+           <div class ="alert alert-danger" >Kayıtlı Makale Bulunmuyor.</div>
+    {% endif %}
+
+</ul>
+{% endblock body %}

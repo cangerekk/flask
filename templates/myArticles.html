@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<h1>Makalelerim</h1>
+<hr>
+<br>
+<br>
+{% if makalelerim  %}
+
+<div class="list-group">
+
+{% for makale in makalelerim %}
+
+<a href="/articles/{{makale.id}}" class="list-group-item list-group-item-dark">
+    {{makale.baslik}}
+  </a>
+
+{% endfor %}
+</div>
+
+{% else %}
+
+<div class ="alert alert-danger">Yayınlanmış Makaleniz Bulunmamaktadır.</div>
+{% endif %}
+
+
+{% endblock body %}
+
+
